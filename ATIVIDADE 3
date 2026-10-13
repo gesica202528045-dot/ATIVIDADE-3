@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 3 - Responsividade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="coluna">Coluna 1</div>
+    <div class="coluna">Coluna 2</div>
+    <div class="coluna">Coluna 3</div>
+  </div>
+
+</body>
+</html>
+/* Reset básico de margens */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Layout Padrão (Desktop): 3 Colunas lado a lado */
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.coluna {
+  flex: 1;
+  background-color: #00a896;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+/* Media Query para Dispositivos Móveis (Celulares) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Transforma o layout em 1 coluna empilhada */
+  }
+}
